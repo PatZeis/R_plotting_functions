@@ -1,0 +1,6 @@
+Arguments:norm=F(normalized by sample size), cluster size = only include cluster with at least cluster_size cells, order ( order of cluster in the barplot)
+
+ example:
+ cluster <- c(1, 3, 19, 5, 12, 6, 16, 7, 10, 15, 8, 11, 20, 14, 17, 4, 2, 9, 13, 18, 21)
+get_cluster_composition(restinglung.integrated2, norm = F, seurat = T, cluster_size = 10, leg = F, order = cluster)
+
