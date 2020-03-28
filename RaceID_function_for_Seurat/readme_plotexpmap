@@ -1,0 +1,8 @@
+normalize seurat counts and store in object  
+example:
+restinglung.integrated2 <- getRC_object(object=restinglung.integrated2)
+
+normalize expression of selected gene
+addition arguments: mintotal=2000 scaling factor for normalization of counts, following RaceID mintotal argument
+example
+plotexpmap(restinglung.integrated2, "Tcf7", logsc = T, seurat = T, mintotal = 2000)

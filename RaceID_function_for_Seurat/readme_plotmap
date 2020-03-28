@@ -1,0 +1,7 @@
+compute cluster medoids of seurate dataset
+example:
+medoids <- compmedoids(restinglung.integrated2@assays$integrated, restinglung.integrated2$seurat_clusters)
+
+plot cluster including medoids of cluster
+example:
+plotmap(restinglung.integrated2, seurat = T, medoids = medoids, reduction="umap")

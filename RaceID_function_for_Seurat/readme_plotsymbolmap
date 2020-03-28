@@ -1,0 +1,3 @@
+arguments: additional argument: reduction = reduction used for seurat object
+example:
+plotsymbolsmap(restinglung.integrated2, types = sub("\\_.+", "", colnames(restinglung.integrated2@assays$integrated@data)), leg=F, seurat=T, reduction = "umap")
