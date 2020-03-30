@@ -67,7 +67,8 @@ plotmap <- function (object, final = TRUE, tp = 1, fr = FALSE, um = FALSE,
       d <- object@tsne
     }
   }
-  fcol <- rainbow(length(unique(as.numeric(part))))
+  if (is.null(sc@fcol)) { fcol <- rainbow(length(unique(as.numeric(part))))}
+  else { fcol <- sc@fcol}
   row.names(d) <- names(part)
   plot(d, xlab = "", ylab = "", cex = 0, axes = FALSE)
   for (i in 1:max(as.numeric(part))) {
