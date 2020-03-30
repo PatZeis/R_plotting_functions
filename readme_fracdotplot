@@ -1,0 +1,19 @@
+arguments: 
+
+=> genes: select genes dot plot
+=> cluster: select clusters to plot relative fraction of cells expressing selected genes within selected cluster and average expression of expression with that cluster, if clusters are selected  samples argument  has to be =NULL
+=> samples: select samples to plot average expression or positive fraction of selected gene 
+=> sampclus: only cells of type samplelclus are selected for cluster specific fractiona and mean expression
+=> limup: upper limit for depicted cluster or sample specific expression 
+=> limdown: lower limit
+=> zsc: if zsc=T mean expression for cluster is z-score transformed 
+=> seurat: if seurat=T, relevant information are extracted from seurat object 
+=> mintotal: if seurat=T scaling factor for normalization of counts, following RaceID mintotal argument
+
+Example for Seurat:
+
+#before plotting normalize seurat counts by library size and store in object  
+
+restinglung.integrated2 <- getRC_object(object=restinglung.integrated2) 
+
+fracdotplot(restinglung.integrated2, genes, cluster = cluster, sampclus = "LocksSkin", limup = 1, limdown = -1, mintotal = 2000, seurat = T)
