@@ -116,7 +116,7 @@ fracdotplot <- function( object, genes, cluster=NULL, sampclus = NULL, samples=N
     for ( n in 1:length(samples)) {
       samp <- colnames(ndata)[grep(samples[n], colnames(ndata))]
       leng_samp <- length(samp)
-      leng_gene_in_samp <- length(which(ndata[genes[i], samp ]> 0))
+      leng_gene_in_samp <- length(which(ndata[genes[i], samp ]> 0.1))
       frac <- c(frac, leng_gene_in_samp/leng_samp)
       repsamp <- c(repsamp, samples[n])
       if ( zsc ) { cent_mean <- c(cent_mean, (mean(as.numeric(ndata[genes[i], samp])) - meang)/sdg) } 
