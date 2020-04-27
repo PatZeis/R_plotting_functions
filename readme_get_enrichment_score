@@ -1,0 +1,7 @@
+### plot:
+1) nomrmalized sample composition of clusters, i.e. relative contribution of samples to the different clusters as pie chart
+2) enrichment scores and the respective p-values(-log10-values, one-sided)  based on the division of relative frequency of samples wihtin cluster  with expected frequency, i.e. actual  frequency of sample within dataset 
+
+arguments: object(object name e.g. sc), sample(names of the samples), clustersize(size of cluster to include), alternat(alternative hypothesis of fisher.test() function)
+
+example: get_enrichment(sc, sample = c("Donor", "Host"))    
