@@ -105,7 +105,7 @@ plotexpmap <- function (object, g, n = NULL, logsc = FALSE, imputed = FALSE,
   if ( seurat) {
     if (reduction=="umap") {d <- object@reductions$umap@cell.embeddings}
     if (reduction=="pca") { d <- object@reductions$pca@cell.embeddings}
-    if (reduction=="tsne") {d <- object@reductions$pca@cell.embeddings}
+    if (reduction=="tsne") {d <- object@reductions$tsne@cell.embeddings}
     
   }
   else {
