@@ -9,7 +9,7 @@ fracdotplot <- function( object, genes, cluster=NULL, sampclus = NULL, samples=N
   library(ggplot2)
   library(RColorBrewer)
   if (seurat) {
-    if ( is.null(object@assays$RC@data)) { 
+    if ( ! "RC" %in% names(object@assays)) {  
       stop("compute relative counts matrix for seurat object")}
     ndata <- as.matrix(object@assays$RC@data * mintotal) + 0.1
     ndata <- data.frame(ndata)
